@@ -1,0 +1,33 @@
+{
+  "name": "ahyadessam/smsa",
+  "description": "laravel SMSA shipping integration",
+  "keywords": ["laravel", "smsa", "shipping", "integration", "api", "packagist"],
+  "homepage": "https://github.com/ahyadessam/smsa",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ahyad Essam",
+      "homepage": "http://ahyad.com",
+      "twitter": "@AhyadEssam"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Smsa\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Smsa\\": "src/"
+    }
+  },
+  "require": {
+    "laravel/framework": "~5.4.0|~5.5.0",
+    "php": ">=5.5.9"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.0"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
