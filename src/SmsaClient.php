@@ -48,10 +48,13 @@ class SmsaClient {
     $xml = $this->createXml('addShip', array_merge($parameters_array, $variables));
     $result = $this->send($xml);
 
-    $response = (array) $result->Body->addShipResponse->addShipResult;
+    if(isset($result->Body->addShipResponse))
+      $response = (array) $result->Body->addShipResponse->addShipResult;
+    else
+      $response = (array) $result->Body->Fault->faultstring;
 
     if(is_numeric($response[0])){
-      return ['status' => true, 'value' => 'Shipped'];
+      return ['status' => true, 'value' => $response[0]];
     }else{
       return ['status' => false, 'value' => $response[0]];
     }
