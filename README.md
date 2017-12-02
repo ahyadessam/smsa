@@ -48,16 +48,31 @@ class HomeController extends Controller
 {
   public function smsa_shipping(){
     $parameters = [
-      'refNo'         => '122222',
-      'idNo'          => '1',
-      'cName'         => 'customer name',
+      'refNo'         => '22222',
+      'idNo'          => 'id',
+      'cName'         => 'name',
       'cntry'         => 'KSA',
       'cCity'         => 'Riyadh',
-      'cMobile'       => '050505050505',
-      'cAddr1'        => 'testing',
+      'cMobile'       => '033333333',
+      'cAddr1'        => 'test',
+      'cAddr2'        => '',
       'PCs'           => '1',
       'cEmail'        => 'test@test.com',
       'weight'        => '1',
+      'cZip'          => '',
+      'cPOBox'        => '',
+      'cTel1'         => '',
+      'cTel2'         => '',
+      'carrValue'     => '',
+      'carrCurr'      => '',
+      'codAmt'        => '',
+      'custVal'       => '',
+      'custCurr'      => '',
+      'insrAmt'       => '',
+      'insrCurr'      => '',
+      'itemDesc'      => '',
+      'prefDelvDate'  => '',
+      'gpsPoints'     => ''
     ];
 
     $test = Smsa::Shipping($parameters);
